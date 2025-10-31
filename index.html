@@ -1,86 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Halloween de Plin</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Plin Halloween 💀</title>
   <style>
-    body {
-      background-color: black;
-      color: orange;
-      text-align: center;
-      font-family: 'Comic Sans MS', cursive;
-      overflow: hidden;
+    * {
       margin: 0;
       padding: 0;
-      animation: parpadeoFondo 4s infinite alternate;
+      box-sizing: border-box;
     }
 
-    @keyframes parpadeoFondo {
-      0% { background-color: #000; }
-      50% { background-color: #1a0000; }
-      100% { background-color: #000; }
+    body {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      overflow: hidden;
+      color: #f3efe6;
+      font-family: "Inter", sans-serif;
+      text-align: center;
+      background-color: #000;
+      position: relative;
     }
 
-    h1 {
-      font-size: 2.5em;
-      text-shadow: 0 0 15px red, 0 0 25px orange;
-      animation: parpadeoTexto 2s infinite alternate;
-      margin-top: 40px;
-    }
-
-    @keyframes parpadeoTexto {
-      from { opacity: 1; }
-      to { opacity: 0.5; }
-    }
-
-    p {
-      font-size: 1.5em;
-      color: white;
-      margin: 10px 0 30px 0;
-    }
-
+    /* Fondo animado */
     .gif-terror {
-      width: 80%;
-      max-width: 400px;
-      border: 3px solid orange;
-      border-radius: 10px;
-      box-shadow: 0 0 20px red;
-      animation: resplandor 3s infinite alternate;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.85;
     }
 
-    @keyframes resplandor {
-      0% { box-shadow: 0 0 15px red; }
-      100% { box-shadow: 0 0 35px orange; }
+    /* Texto principal */
+    h1 {
+      font-size: 2.2rem;
+      color: #ff3b3b;
+      text-shadow: 0 0 15px #ff0000;
+      animation: flicker 1.5s infinite alternate;
+      z-index: 2;
     }
 
-    .mensaje {
-      margin-top: 20px;
-      font-size: 1.2em;
-      color: #ffcc66;
-      text-shadow: 0 0 10px orange;
+    @keyframes flicker {
+      from { opacity: 0.8; text-shadow: 0 0 5px #ff0000; }
+      to { opacity: 1; text-shadow: 0 0 25px #ff0000; }
     }
 
-    footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: gray;
+    /* Emojis */
+    .emoji {
+      font-size: 2rem;
+      margin-top: 15px;
+      z-index: 2;
+    }
+
+    /* Murciélagos */
+    .bats {
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 2rem;
+      color: #ccc;
+      animation: fly 6s linear infinite;
+      z-index: 2;
+    }
+
+    @keyframes fly {
+      0% { transform: translateX(-100%); }
+      50% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* Sangre cayendo */
+    .blood {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 30px;
+      background: linear-gradient(to bottom, #8b0000, transparent);
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      filter: blur(1px);
+      z-index: 2;
     }
   </style>
 </head>
 <body>
-  <h1>🎃 ¡Noche de sustos y travesuras! 🎃</h1>
-  <p>Bienvenido al Halloween de Plin</p>
-
-  <img class="gif-terror" src="4Ood.gif" alt="GIF de terror">
-
-  <div class="mensaje">
-    💀 Felicidades, acabas de donar <b>0.00 soles</b> 🤣<br>
-    ¡Gracias por apoyar el fondo del miedo! 👻
-  </div>
-
-  <footer>
-    © 2025 Plin Halloween – Disfruta bajo tu propio riesgo 💀
-  </footer>
+  <img class="gif-terror" src="terror.gif" alt="GIF de terror">
+  <div class="blood"></div>
+  <div class="bats">🦇 🦇 🦇</div>
+  <h1>¡Noche de sustos y travesuras!<br>Felicidades, acabas de donar 0.00 soles 🤣</h1>
+  <div class="emoji">💀🎃🩸</div>
 </body>
 </html>
