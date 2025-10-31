@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Halloween Plin 💀🎃</title>
+  <title>Plin Halloween 💀🎃</title>
   <style>
     body {
       margin: 0;
@@ -17,6 +17,7 @@
       overflow: hidden;
       color: #f3efe6;
     }
+
     h1 {
       font-size: 2.2rem;
       text-align: center;
@@ -24,69 +25,31 @@
       text-shadow: 0 0 15px #ff0000;
       animation: flicker 1.5s infinite alternate;
     }
+
     @keyframes flicker {
       from { opacity: 0.8; text-shadow: 0 0 5px #ff0000; }
       to { opacity: 1; text-shadow: 0 0 20px #ff0000; }
     }
-    .emoji {
-      font-size: 2.5rem;
-      margin-top: 10px;
+
+    .gif-terror {
+      width: 350px;
+      margin-top: 20px;
+      border: 3px solid #8b0000;
+      box-shadow: 0 0 25px crimson;
+      border-radius: 10px;
     }
-    .bats {
-      position: absolute;
-      top: 20px;
-      width: 100%;
-      text-align: center;
-      font-size: 2rem;
-      color: #ccc;
-      animation: fly 6s linear infinite;
-    }
-    @keyframes fly {
-      0% { transform: translateX(-100%); }
-      50% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
-    .blood {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 40px;
-      background: linear-gradient(to bottom, #8b0000, transparent);
-      border-bottom-left-radius: 50%;
-      border-bottom-right-radius: 50%;
-      filter: blur(1px);
-    }
-    .ghost {
-      position: absolute;
-      left: 10%;
-      bottom: 10%;
-      font-size: 3rem;
-      animation: float 4s ease-in-out infinite;
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-    }
-    .spider {
-      position: absolute;
-      right: 15%;
-      top: 0;
-      font-size: 2rem;
-      animation: drop 5s ease-in-out infinite;
-    }
-    @keyframes drop {
-      0% { transform: translateY(-80px); }
-      50% { transform: translateY(150px); }
-      100% { transform: translateY(-80px); }
+
+    .mensaje {
+      font-size: 1.3rem;
+      margin-top: 15px;
+      color: #ff3b3b;
+      text-shadow: 0 0 10px #ff0000;
     }
   </style>
 </head>
 <body>
-  <div class="blood"></div>
-  <div class="bats">🦇 🦇 🦇</div>
-  <div class="ghost">👻</div>
-  <div class="spider">🕷️</div>
-  <h1>¡Noche de sustos y travesuras!<br>🕸️ Bienvenido al Halloween de Plin 🕸️</h1>
-  <div class="emoji">🎃💀🧛‍♂️🩸🕷️</div>
+  <h1>🎃 ¡Feliz Halloween del Plin! 🎃</h1>
+  <img class="gif-terror" src="https://i.gifer.com/4Ood.gif" alt="GIF de terror">
+  <div class="mensaje">💀 Felicidades, acabas de donar 0.00 soles 🤣 💀</div>
 </body>
 </html>
