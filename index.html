@@ -1,100 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>🎃 Plin Halloween 💀</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halloween de Plin</title>
   <style>
     body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      background: radial-gradient(circle at top, #0b1020 0%, #000000 100%);
-      font-family: "Inter", sans-serif;
+      background-color: black;
+      color: orange;
+      text-align: center;
+      font-family: 'Comic Sans MS', cursive;
       overflow: hidden;
-      color: #f3efe6;
+      margin: 0;
+      padding: 0;
+      animation: parpadeoFondo 4s infinite alternate;
     }
 
-    /* Animación de parpadeo del texto */
+    @keyframes parpadeoFondo {
+      0% { background-color: #000; }
+      50% { background-color: #1a0000; }
+      100% { background-color: #000; }
+    }
+
     h1 {
-      font-size: 2.3rem;
-      text-align: center;
-      color: #ff6600;
-      text-shadow: 0 0 15px #ff0000;
-      animation: flicker 1.5s infinite alternate;
+      font-size: 2.5em;
+      text-shadow: 0 0 15px red, 0 0 25px orange;
+      animation: parpadeoTexto 2s infinite alternate;
+      margin-top: 40px;
     }
 
-    @keyframes flicker {
-      from { opacity: 0.8; text-shadow: 0 0 5px #ff0000; }
-      to { opacity: 1; text-shadow: 0 0 25px #ff0000; }
+    @keyframes parpadeoTexto {
+      from { opacity: 1; }
+      to { opacity: 0.5; }
     }
 
-    /* El GIF de terror */
+    p {
+      font-size: 1.5em;
+      color: white;
+      margin: 10px 0 30px 0;
+    }
+
     .gif-terror {
-      width: 360px;
-      margin-top: 25px;
-      border: 3px solid #8b0000;
-      box-shadow: 0 0 35px crimson;
-      border-radius: 12px;
+      width: 80%;
+      max-width: 400px;
+      border: 3px solid orange;
+      border-radius: 10px;
+      box-shadow: 0 0 20px red;
+      animation: resplandor 3s infinite alternate;
     }
 
-    /* Mensaje final */
+    @keyframes resplandor {
+      0% { box-shadow: 0 0 15px red; }
+      100% { box-shadow: 0 0 35px orange; }
+    }
+
     .mensaje {
-      font-size: 1.4rem;
       margin-top: 20px;
-      color: #ff3b3b;
-      text-shadow: 0 0 10px #ff0000;
-      animation: flicker 2s infinite alternate;
+      font-size: 1.2em;
+      color: #ffcc66;
+      text-shadow: 0 0 10px orange;
     }
 
-    /* Efecto de murciélagos volando */
-    .bats {
-      position: absolute;
-      top: 10px;
-      width: 100%;
-      text-align: center;
-      font-size: 2rem;
-      color: #ccc;
-      animation: fly 8s linear infinite;
-    }
-
-    @keyframes fly {
-      0% { transform: translateX(-100%); }
-      50% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
-
-    /* Efecto de niebla */
-    .fog {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 200%;
-      height: 100%;
-      background: url('https://i.imgur.com/1Q9Z1Zm.png') repeat-x;
-      opacity: 0.15;
-      animation: fogMove 60s linear infinite;
-    }
-
-    @keyframes fogMove {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: gray;
     }
   </style>
 </head>
-
 <body>
-  <div class="fog"></div>
-  <div class="bats">🦇 🦇 🦇</div>
+  <h1>🎃 ¡Noche de sustos y travesuras! 🎃</h1>
+  <p>Bienvenido al Halloween de Plin</p>
 
-  <h1>¡Noche de sustos y travesuras!<br>Feliz Halloween 🎃</h1>
+  <img class="gif-terror" src="https://raw.githubusercontent.com/CMAS1999/plin-halloween/main/4Ood.gif" alt="GIF de terror">
 
-  <!-- Cambia "terror.gif" por el nombre exacto del GIF que subiste -->
-  <img class="gif-terror" src="terror.gif" alt="GIF de terror">
+  <div class="mensaje">
+    💀 Felicidades, acabas de donar <b>0.00 soles</b> 🤣<br>
+    ¡Gracias por apoyar el fondo del miedo! 👻
+  </div>
 
-  <div class="mensaje">💀 Felicidades, acabas de donar 0.00 soles 🤣 💀</div>
+  <footer>
+    © 2025 Plin Halloween – Disfruta bajo tu propio riesgo 💀
+  </footer>
 </body>
 </html>
