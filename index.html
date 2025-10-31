@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Plin Halloween 💀</title>
+  <title>Halloween Plin 💀🎃</title>
   <style>
     body {
       margin: 0;
@@ -12,15 +12,15 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      background: linear-gradient(180deg, #0b1020 0%, #02111a 100%);
+      background: radial-gradient(circle at top, #0b1020 0%, #01060a 100%);
       font-family: "Inter", sans-serif;
       overflow: hidden;
       color: #f3efe6;
     }
     h1 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       text-align: center;
-      color: #ff3b3b;
+      color: #ff6600;
       text-shadow: 0 0 15px #ff0000;
       animation: flicker 1.5s infinite alternate;
     }
@@ -29,8 +29,8 @@
       to { opacity: 1; text-shadow: 0 0 20px #ff0000; }
     }
     .emoji {
-      font-size: 2rem;
-      margin-top: 15px;
+      font-size: 2.5rem;
+      margin-top: 10px;
     }
     .bats {
       position: absolute;
@@ -50,26 +50,43 @@
       position: absolute;
       top: 0;
       width: 100%;
-      height: 30px;
+      height: 40px;
       background: linear-gradient(to bottom, #8b0000, transparent);
       border-bottom-left-radius: 50%;
       border-bottom-right-radius: 50%;
       filter: blur(1px);
     }
-    .donacion {
-      margin-top: 10px;
-      font-size: 1.2rem;
-      color: #ff3b3b;
-      text-shadow: 0 0 10px #ff0000;
-      animation: flicker 2s infinite alternate;
+    .ghost {
+      position: absolute;
+      left: 10%;
+      bottom: 10%;
+      font-size: 3rem;
+      animation: float 4s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    .spider {
+      position: absolute;
+      right: 15%;
+      top: 0;
+      font-size: 2rem;
+      animation: drop 5s ease-in-out infinite;
+    }
+    @keyframes drop {
+      0% { transform: translateY(-80px); }
+      50% { transform: translateY(150px); }
+      100% { transform: translateY(-80px); }
     }
   </style>
 </head>
 <body>
   <div class="blood"></div>
   <div class="bats">🦇 🦇 🦇</div>
-  <h1>No me des drama,<br> mándame la lana 😎</h1>
-  <div class="emoji">💀🎃🩸</div>
-  <p class="donacion">Felicidades, acabas de donar 0.00 soles 🤣</p>
+  <div class="ghost">👻</div>
+  <div class="spider">🕷️</div>
+  <h1>¡Noche de sustos y travesuras!<br>🕸️ Bienvenido al Halloween de Plin 🕸️</h1>
+  <div class="emoji">🎃💀🧛‍♂️🩸🕷️</div>
 </body>
 </html>
